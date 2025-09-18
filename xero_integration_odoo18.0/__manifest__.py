@@ -4,7 +4,9 @@
     'version': '1.0',
     'summary': "Integrate Odoo with Xero Accounting",
     'author': " Abhishek Kumar ",
+    'web_icon': 'xero_integration_odoo18.0,static/src/img/icon.png',
     'depends': ['base', 'account','mail'], # 'account' zaroori hai
+
     'data': [
         'security/ir.model.access.csv',
         'data/ir_cron_data.xml',
