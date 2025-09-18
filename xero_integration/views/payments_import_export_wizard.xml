@@ -1,0 +1,32 @@
+<odoo>
+
+    <record id="action_xero_payment_sync_wizard" model="ir.actions.act_window">
+        <field name="name">Sync Payments with Xero</field>
+        <field name="res_model">xero.payment.sync.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="menu_xero_sync_payments" 
+        name="Sync Payments" 
+        parent="menu_xero_config" action="action_xero_payment_sync_wizard" 
+        sequence="40"/>
+    
+    <record id="xero_payment_sync_wizard_form" model="ir.ui.view">
+        <field name="name">xero.payment.sync.wizard.form</field>
+        <field name="model">xero.payment.sync.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="operation" widget="radio"/>
+                </group>
+                <footer>
+                    <button name="action_confirm_sync" string="Sync Now" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

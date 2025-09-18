@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_config_settings_xero_custom,res.config.settings.xero.custom,model_res_config_settings_custom,base.group_system,1,1,1,1
+access_xero_invoice_sync_wizard,xero.invoice.sync.wizard,model_xero_invoice_sync_wizard,base.group_system,1,1,1,1
+access_xero_contact_sync_wizard,xero.contact.sync.wizard,model_xero_contact_sync_wizard,base.group_system,1,1,1,1
+access_xero_product_sync_wizard,xero.product.sync.wizard access,model_xero_product_sync_wizard,account.group_account_manager,1,1,1,1
+access_xero_payment_sync_wizard,xero.payment.sync.wizard access,model_xero_payment_sync_wizard,account.group_account_manager,1,1,1,1
+

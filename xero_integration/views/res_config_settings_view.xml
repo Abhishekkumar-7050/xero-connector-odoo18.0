@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="xero_res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.xero</field>
+        <field name="model">res.config.settings.custom</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="col-12 col-lg-6 o_setting_box">
+            <button name="button_connect_to_xero"
+                    type="object"
+                    string="Connect to Xero"
+                    class="btn-primary"
+                    help="Click to authorize Odoo with your Xero account."/>
+
+            <!-- <button name="button_fetch_xero_tenants"
+                                type="object"
+                                string="Fetch Xero Tenants"
+                                class="btn-secondary mt8"
+                                help="Click to get the list of authorized organizations from Xero."/> -->
+
+               </div>
+
+                    <div class="app_settings_block" data-string="Xero Integration" string="Xero Integration">
+                        <setting string="Enable Xero" help="Activate the Xero synchronization features.">
+                            <field name="xero_active" class="oe_inline"/>
+                        </setting>
+                        
+
+                        <div id="xero_conditional_settings" invisible="not xero_active">
+                            <h2>Xero API Credentials</h2>
+                            <div class="row mt16 o_settings_container">
+                                <div class="col-12 col-lg-6 o_setting_box">
+                                    <div class="o_setting_right_pane">
+                                        <group>
+                                         <field name="xero_tenant_name" />
+                                        <field name="xero_client_id"/>
+                    
+                                        <field name="xero_client_secret"/>
+                                        </group>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mt16">Synchronization Rules</h2>
+                            <div class="row mt16 o_settings_container">
+                                <div class="col-12 col-lg-6 o_setting_box">
+                                    <div class="o_setting_right_pane">
+                                        <field name="xero_auto_sync_invoice"/>
+                                        <label for="xero_auto_sync_invoice"/>
+                                        <div class="text-muted">
+                                            Automatically sync invoices to Xero when they are posted.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 col-lg-6 o_setting_box">
+                                    <div class="o_setting_right_pane">
+                                        <label for="xero_default_sales_account_id"/>
+                                        <div class="text-muted">
+                                            Default income account for invoice lines.
+                                        </div>
+                                        <field name="xero_default_sales_account_id" required="xero_auto_sync_invoice"/>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+     <record id="xero_res_config_settings_tree_view" model="ir.ui.view">
+        <field name="name">xero.res.config.settings.custom.tree</field>
+        <field name="model">res.config.settings.custom</field>
+        <field name="arch" type="xml">
+            <list string="Xero Settings History">
+                <field name="create_date" string="Saved On"/>
+                <field name="xero_active" string="Integration Active"/>
+                <field name="xero_client_id"/>
+                <field name="xero_tenant_name" />
+            </list>
+        </field>
+    </record>
+
+
+
+
+
+     <record id="xero_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <!-- <field name="type">ir.actions.act_window</field> -->
+        <field name="res_model">res.config.settings.custom</field>
+        <field name="view_mode">list,form</field>
+        <!-- <field name="target">inline</field> -->
+        <!-- <field name="context">{'module' : 'xero_integration'}</field> -->
+    </record>
+
+    <menuitem id="menu_xero_root"
+        
+        name="Xero Integration"
+        action="xero_config_settings_action"
+        sequence="10"
+        web_icon="xero_integration,static/description/icon.png"
+        />
+
+    <menuitem id="menu_xero_config"
+        name="Configuration"
+        parent="menu_xero_root"
+        sequence="40"/>
+
+
+    
+
+    <menuitem id="menu_xero_settings"
+        name="Settings"
+        parent="menu_xero_config"
+        sequence="30"
+        action="xero_config_settings_action"
+        groups="base.group_system"/>
+</odoo>

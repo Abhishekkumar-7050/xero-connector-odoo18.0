@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div
+        style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; width: 100%;; margin: 20px auto; border: 1px solid #ddd; border-radius: 8px; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+        <h2
+            style="font-size: 24px; color: #0056b3; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 0;">
+            Odoo-Xero Integration Connector</h2>
+        <p style="font-size: 16px; margin-bottom: 20px;">
+            This module provides a powerful and straightforward connection between your Odoo database and your Xero
+            accounting software. By synchronizing key financial data, it eliminates the need for manual data entry,
+            reduces errors, and ensures your accounting records are consistent across both platforms.
+        </p>
+        <p style="font-size: 16px; font-style: italic; color: #555;">
+            Keep your sales and accounting teams perfectly in sync.
+        </p>
+
+        <div style="margin-top: 30px;">
+            <h2 style="font-size: 24px; color: #0056b3; border-bottom: 2px solid #007bff; padding-bottom: 10px;">Key
+                Features</h2>
+            <div style="margin-top: 15px;">
+                <p
+                    style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #28a745; margin-bottom: 10px; border-radius: 4px;">
+                    <strong style="color: #218838;">Contact Synchronization:</strong> Automatically create or update a
+                    contact in Xero whenever a new customer is created in Odoo.
+                </p>
+                <p
+                    style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #28a745; margin-bottom: 10px; border-radius: 4px;">
+                    <strong style="color: #218838;">Invoice Synchronization:</strong> Export customer invoices from Odoo
+                    to Xero seamlessly. The module ensures that once an invoice is validated in Odoo, it appears in Xero
+                    with the correct details, ready for reconciliation.
+                </p>
+                <p
+                    style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #28a745; margin-bottom: 10px; border-radius: 4px;">
+                    <strong style="color: #218838;">Payment Synchronization:</strong> When a payment is registered in
+                    Odoo and reconciled against an invoice, that payment is automatically created in Xero and applied to
+                    the corresponding invoice. This keeps your invoice statuses up-to-date in both systems.
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h2 style="font-size: 24px; color: #0056b3; border-bottom: 2px solid #007bff; padding-bottom: 10px;">Setup
+                and Configuration</h2>
+            <p style="font-size: 16px; margin-bottom: 20px;">
+                Before you can sync data, you must connect Odoo to your Xero account.
+            </p>
+            <div style="border: 1px solid #eee; padding: 20px; border-radius: 5px;">
+                <p style="margin-top: 0;"><strong>1. Install the Module:</strong> First, install the "Odoo-Xero
+                    Integration Connector" from your Apps list.</p>
+                <p style="margin-bottom: 0;"><strong>2. Enter Xero API Credentials:</strong><br>
+                    Navigate to <em>Invoicing &gt; Configuration &gt; Settings &gt; Xero Integration</em>.
+                    You will need to enter the <strong>Client ID</strong> and <strong>Client Secret</strong> from your
+                    Xero Developer application. You can create an app on the Xero Developer Portal. Click
+                    <strong>Connect to Xero</strong> and follow the prompts to authorize the connection.
+                </p>
+            </div>
+        </div>
+
+        <div
+            style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 100%; margin: 20px auto; padding: 10px;">
+
+            <h2
+                style="font-size: 28px; color: #0056b3; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-bottom: 30px; text-align: center;">
+                How to use Steps -
+            </h2>
+
+            <ol style="list-style: none; padding: 0;">
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 1: Enable Xero</h3>
+                    <p style="font-size: 16px; color: #6c757d;">Navigate to the settings and activate the main Xero
+                        synchronization feature to begin the setup process.</p>
+                    <img src="start.png"
+                        alt="Odoo settings screen with the Xero activation toggle"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 2: Add Credentials</h3>
+                    <p style="font-size: 16px; color: #6c757d;">Enter your unique Client ID and Client Secret obtained
+                        from your Xero Developer application.</p>
+                    <img src="Edited.png"
+                        alt="Credential input fields for Xero Client ID and Client Secret in Odoo"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 3: Connect to Xero</h3>
+                    <p style="font-size: 16px; color: #6c757d;">Click the 'Connect' button. This will securely redirect
+                        you to the official Xero website to authorize the connection.</p>
+                    <img src="config.png"
+                        alt="Odoo screen showing the 'Connect to Xero' button"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 4: Configure Synchronization Rules
+                    </h3>
+                    <p style="font-size: 16px; color: #6c757d;">Set your preferences for automatic syncing. For example,
+                        enable 'Auto-Sync Invoices on Posting' to send invoices to Xero as soon as they are validated.
+                    </p>
+                    <img src="Edited.png"
+                        alt="Synchronization rules settings in Odoo for invoices and contacts"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 5: Allow Access on Xero</h3>
+                    <p style="font-size: 16px; color: #6c757d;">On the Xero authorization page, review the requested
+                        permissions and click the 'Allow access' button to grant Odoo permission to sync data.</p>
+                    <img src="xero_auth.png"
+                        alt="Xero's official authorization page with 'Allow access' button"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 6: Redirect Back to Odoo</h3>
+                    <p style="font-size: 16px; color: #6c757d;">After successfully authorizing, you will be
+                        automatically redirected back to your Odoo settings page.</p>
+                    <img src="Edited.png"
+                        alt="Successful connection message in Odoo after redirect"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 7: Use Import & Export Menus</h3>
+                    <p style="font-size: 16px; color: #6c757d;">You will now see new 'Xero' menus in your Invoicing app.
+                        Click on a menu, like 'Import Contacts', to open a wizard with buttons to start the process.</p>
+                    <img src="popupcontact.png"
+                        alt="Wizard in Odoo for importing Xero contacts with an 'Import' button"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 8: Confirm Successful Sync</h3>
+                    <p style="font-size: 16px; color: #6c757d;">Follow the same steps for invoices or other records.
+                        After a successful operation, a confirmation notification will appear.</p>
+                    <img src="invoice_success_count.png"
+                        alt="Green success notification in Odoo after importing invoices"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 9: Access Advanced Configuration
+                    </h3>
+                    <p style="font-size: 16px; color: #6c757d;">Find advanced settings for payments, products, and
+                        default accounts under the 'Configuration' menu in the Invoicing app.</p>
+                    <img src="config.png"
+                        alt="Advanced configuration menu for Xero in Odoo"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+                <li
+                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top: 0; font-size: 22px; color: #343a40;">Step 10: go to in xero
+                    </h3>
+                    <p style="font-size: 16px; color: #6c757d;">Find  invoice  state and  payment staus and due</p>
+                    <img src="Screenshot from 2025-09-18 12-58-45.png"
+                        alt="in xero you can see the sync  Data"
+                        style="width: 100%; height: auto; border-radius: 4px; margin-top: 15px; display: block;">
+                </li>
+
+            </ol>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

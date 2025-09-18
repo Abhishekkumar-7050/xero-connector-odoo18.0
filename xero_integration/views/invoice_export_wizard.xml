@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="xero_invoice_sync_wizard_view_form" model="ir.ui.view">
+        <field name="name">xero.invoice.sync.wizard.form</field>
+        <field name="model">xero.invoice.sync.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Xero Invoice Sync">
+                <group>
+                    <field name="operation" widget="radio"/>
+                    <!-- <field name="xero_tenant_id" options="{'no_create': True, 'no_open': True}"/> -->
+                </group>
+                <footer>
+                    <button name="action_confirm_sync" string="Confirm" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="action_xero_invoice_sync_wizard" model="ir.actions.act_window">
+        <field name="name">Import / Export Invoices</field>
+        <field name="res_model">xero.invoice.sync.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_xero_sync"
+        name="Import / Export Invoices"
+        parent="menu_xero_root"
+        action="action_xero_invoice_sync_wizard"
+        sequence="34"/>
+
+
+
+
+
+</odoo>
