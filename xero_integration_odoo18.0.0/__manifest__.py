@@ -4,7 +4,7 @@
     'version': '1.0',
     'summary': "Integrate Odoo with Xero Accounting",
     'author': " Abhishek Kumar ",
-    'web_icon': 'xero_integration_odoo18.0,static/src/img/icon.png',
+    'web_icon': 'xero_integration_odoo18.0.0,static/src/img/icon.png',
     'depends': ['base', 'account','mail'], # 'account' zaroori hai
 
     'data': [
@@ -17,6 +17,10 @@
         'views/product_import_export_wizard.xml',
         'views/payments_import_export_wizard.xml',
     ],
+    'images': [
+    'static/description/icon.png',  # This will be your app icon
+    ],
+    
     'installable': True,
     'application': True,
 }
