@@ -20,7 +20,7 @@
         'views/payments_import_export_wizard.xml',
     ],
     'images': [
-    'static/description/17img.png',  # This will be your app icon
+    'static/description/17imgg.png',  # This will be your app icon
     ],
 
     'installable': True,
