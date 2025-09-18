@@ -1,7 +1,8 @@
 # __manifest__.py
 {
     'name': "Xero Integration",
-    'version': '1.0',
+    # 'version': '1.0',
+    'version':'17.0.1.0.0',
     'summary': "Integrate Odoo with Xero Accounting",
     'author': " Abhishek Kumar ",
     'web_icon': 'xero_integration_odoo18.0.0,static/src/img/icon.png',
