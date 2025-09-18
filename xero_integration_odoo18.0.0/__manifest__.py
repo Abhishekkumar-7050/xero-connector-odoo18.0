@@ -1,7 +1,7 @@
 # __manifest__.py
 {
     'name': "Xero Integration",
-    'version': '1.0',
+    'version': '18.0.0.0',
     'summary': "Integrate Odoo with Xero Accounting",
     'author': " Abhishek Kumar ",
     'web_icon': 'xero_integration_odoo18.0.0,static/src/img/icon.png',
@@ -19,7 +19,7 @@
         'views/payments_import_export_wizard.xml',
     ],
     'images': [
-    'static/description/icon.png',  # This will be your app icon
+    'static/description/image18.png',  # This will be your app icon
     ],
 
     'installable': True,
