@@ -102,7 +102,7 @@
         name="Xero Integration"
         action="xero_config_settings_action"
         sequence="10"
-        web_icon="xero_integration,static/description/icon.png"
+        web_icon="xero_integration_odoo18.0,static/description/icon.png"
         />
 
     <menuitem id="menu_xero_config"
